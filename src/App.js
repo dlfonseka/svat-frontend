@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import Header from './components/Header.js'
+import Player from './components/Player.js'
+import Button from './components/Button'
+import AddAnnotation from './components/AddAnnotation.js'
+import {useState} from 'react'
+
+//NOTE: for now, the video is stored in the media folder
+import video from './media/video.mp4'
+
+
 
 function App() {
+
+  var toolchoice = [
+    {value: 'Scalpel', name: 'Scalpel'},
+    {value: 'Dilators', name: 'Dilators'},
+    {value: 'Suction Tip', name: 'Suction Tip'},
+    {value: 'Forceps', name: 'Forceps'}
+  ]
+  
+  const [pausePressed, setPausePressed] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Player src={video}/>
+      <Button 
+        onClick={() => setPausePressed()}
+        text='Pause Video' id='annotate'/>
+      <AddAnnotation choices={toolchoice}/>
     </div>
   );
 }

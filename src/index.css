@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.player {
+  padding-top:50px;
+  padding-right:50px;
+  padding-left:50px;
+  padding-bottom:5px;
+}
+
+.header {
+  padding-bottom: 10px;
+}
+
+#annotate.btn{
+  background-color: rgba(250, 66, 66, 0.829);
+  padding:20px;
+  position: relative;
+  left: 50px;
+}
+
+.add-annotation{
+  display:inline;
+  position: relative;
+  left: 50px;
+}
+
+.textbox{
+  height:50px;
+  width: 250px;
+  position: relative;
+  left: 20px;
+  display: inline;
+}
+
+.dropdown{
+  display: inline;
+  position: relative;
+  left: 10px;
+}
