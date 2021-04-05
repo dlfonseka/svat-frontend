@@ -1,18 +1,19 @@
 import ReactPlayer from 'react-player'
-function Player({src}) {
-    const width = window.innerWidth - 400
-    const height = 9*width / 16
+
+function Player({src, playing}) {
     return (
-        <div className='player'>
+        <div className='player-wrapper'>
             <ReactPlayer 
                 url={src}
                 config={{
                     file: {forceVideo: true}
                 }}
                 controls={false}
-                width={width}
-                height={height}
-                playing={true}
+                width='100%'
+                height='100%'
+                playing={playing}
+                light={true}
+                className='react-player'
                 />
 
         </div>

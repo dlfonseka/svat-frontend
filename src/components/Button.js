@@ -1,6 +1,6 @@
-function Button({text, onClick, id}) {
+function Button({text, onClick, color, id, type}) {
     return (
-        <button id={id} onClick={onClick} className='btn'>
+        <button id={id} onClick={onClick} style={{backgroundColor:color}} className='btn' type={type}>
             {text}
         </button>
     )
